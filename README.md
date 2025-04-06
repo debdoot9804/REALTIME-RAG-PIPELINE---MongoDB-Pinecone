@@ -32,23 +32,9 @@ Groq API (Gemma-2 9B)
 
 Google Colab + Python
 
-📝 Diagram Flow Breakdown
+📝 Architecture:
 
-🔁 Ingestion Path
+![Editor _ Mermaid Chart-2025-04-06-073618](https://github.com/user-attachments/assets/675220a2-26e6-4be9-9673-e934b0c4d8a5)
 
 
-[ MongoDB ] ──► [ MongoDB Change Stream Listener ] ──► [ MiniLM Embeddings ]
-        │                                                      │
-        ▼                                                      ▼
-[ Metadata Store ]                                     [ Pinecone Vector Store ]
-
-----------------------------------------------------------------------------------------------------------------------
-
-🔍 Retrieval + Generation Path
-
-[ User Query ] ──► [ MiniLM (Embedding) ] ──► [ Pinecone Search (Top-k) ] ──►
-        ▼
-[ Retrieved Context ] ──► [ Groq API (Gemma-2 9B) ] ──► [ Final Response ]
-
-----------------------------------------------------------------------------------------------------------------------
 
