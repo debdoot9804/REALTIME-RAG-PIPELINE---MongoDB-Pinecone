@@ -11,29 +11,33 @@ A modular, real-time RAG system that connects:
 
 🧪 Tech Stack:
 
-## MongoDB (Change Streams + Metadata)
+MongoDB (Change Streams + Metadata)
 
-## Pinecone (Vector DB)
+Pinecone (Vector DB)
 
-## Hugging Face Sentence Transformers (all-MiniLM-L6-v2)
+Hugging Face Sentence Transformers (all-MiniLM-L6-v2)
 
-## Groq API (Gemma-2 9B)
+Groq API (Gemma-2 9B)
 
-## Google Colab + Python
+Google Colab + Python
 
 📝 Diagram Flow Breakdown
+
 🔁 Ingestion Path
+
 
 [ MongoDB ] ──► [ MongoDB Change Stream Listener ] ──► [ MiniLM Embeddings ]
         │                                                      │
         ▼                                                      ▼
 [ Metadata Store ]                                     [ Pinecone Vector Store ]
 
+----------------------------------------------------------------------------------------------------------------------
 
 🔍 Retrieval + Generation Path
+
 [ User Query ] ──► [ MiniLM (Embedding) ] ──► [ Pinecone Search (Top-k) ] ──►
         ▼
 [ Retrieved Context ] ──► [ Groq API (Gemma-2 9B) ] ──► [ Final Response ]
 
-
+----------------------------------------------------------------------------------------------------------------------
 
