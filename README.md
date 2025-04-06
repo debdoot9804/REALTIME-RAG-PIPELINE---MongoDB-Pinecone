@@ -3,8 +3,11 @@
 A modular, real-time RAG system that connects:
 
 ✅ MongoDB (as a metadata store) to store and track documents
+
 ✅ Pinecone (as a vector store) to handle semantic retrieval
+
 ✅ All-MiniLM-L6-v2 for lightweight, fast embedding generation
+
 ✅ Groq’s Gemma-2 9B LLM for fast and accurate responses
 
 📦 The system auto-embeds documents on insert via a MongoDB change stream listener, upserts them to Pinecone, and retrieves relevant context on query to generate answers via Groq — all inside Google Colab notebooks.
